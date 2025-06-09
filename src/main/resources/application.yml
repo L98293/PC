@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: Samdi_Tycoon_Project
+
+  datasource:
+#    ??? ??? ?? ????? samdi_tycoon_db ?? ?? ????
+    url: jdbc:mysql://localhost:3306/samdi_pc
+    username: samdiMiniProject
+    password: Qwer1234!
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+
+server:
+  port: 8080
