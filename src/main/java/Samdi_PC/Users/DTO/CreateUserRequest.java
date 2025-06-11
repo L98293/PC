@@ -1,6 +1,6 @@
-package Samdi_PC.USERS.DTO;
+package Samdi_PC.Users.DTO;
 
-import Samdi_PC.USERS.Domain.UserType;
+import Samdi_PC.Users.Domain.UserType;
 
 public record CreateUserRequest(
         String username,

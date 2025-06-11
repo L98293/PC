@@ -1,6 +1,7 @@
-package Samdi_PC.USERS.Domain;
+package Samdi_PC.Users.Domain;
 
 import Samdi_PC.Seat.Domain.Seats;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -21,6 +22,7 @@ public class User {
     private Integer money;
 
     @OneToOne(mappedBy = "user")
+    @JsonManagedReference
     private Seats seat;
 
     @Enumerated(EnumType.STRING)

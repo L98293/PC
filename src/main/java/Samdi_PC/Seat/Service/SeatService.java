@@ -4,9 +4,9 @@ import Samdi_PC.Seat.DTO.CreateSeatRequest;
 import Samdi_PC.Seat.Domain.SeatStatus;
 import Samdi_PC.Seat.Domain.Seats;
 import Samdi_PC.Seat.Repository.SeatRepository;
-import Samdi_PC.USERS.Domain.User;
-import Samdi_PC.USERS.Domain.UserType;
-import Samdi_PC.USERS.Repository.UserRepository;
+import Samdi_PC.Users.Domain.User;
+import Samdi_PC.Users.Domain.UserType;
+import Samdi_PC.Users.Repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -37,7 +37,7 @@ public class SeatService {
                         -> new IllegalArgumentException("해당 사용자를 찾을 수 없습니다."));
         // Seats타입의 seat이라는 이름을 가진 변수 생성
         Seats seat;
-        // NPC좌석 자동 지정
+        // NPC좌석 자동 지정(Chat GPT 다량 사용)
         if (user.getUserType() == UserType.NPC) {
             seat = seatRepository.findAll().stream()
                     // 상태가 AVAILABLE인 좌석만 남김
@@ -48,6 +48,8 @@ public class SeatService {
                     .orElseThrow(()
                             -> new IllegalArgumentException("빈 좌석이 없습니다."));
             // 사용자 좌석 지정
+
+            // 만약 유저타입이 NPC가 아닌 PLAYER라면 아래 코드 실행
         } else {
             if (seatId == null) {
                 throw new IllegalArgumentException("사용자는 좌석을 지정해야합니다.");

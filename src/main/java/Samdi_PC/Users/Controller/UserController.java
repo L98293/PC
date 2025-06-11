@@ -1,9 +1,9 @@
-package Samdi_PC.USERS.Controller;
+package Samdi_PC.Users.Controller;
 
-import Samdi_PC.USERS.DTO.CreateUserRequest;
-import Samdi_PC.USERS.Domain.User;
-import Samdi_PC.USERS.Repository.UserRepository;
-import Samdi_PC.USERS.Service.UserService;
+import Samdi_PC.Users.DTO.CreateUserRequest;
+import Samdi_PC.Users.Domain.User;
+import Samdi_PC.Users.Repository.UserRepository;
+import Samdi_PC.Users.Service.UserService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.resource.ResourceUrlProvider;
 

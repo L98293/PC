@@ -1,4 +1,4 @@
-package Samdi_PC.USERS.Domain;
+package Samdi_PC.Users.Domain;
 
 public enum UserType {
     PLAYER,

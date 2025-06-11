@@ -1,6 +1,7 @@
 package Samdi_PC.Seat.Domain;
 
-import Samdi_PC.USERS.Domain.User;
+import Samdi_PC.Users.Domain.User;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -23,6 +24,7 @@ public class Seats {
     // 해당 좌석을 사용중인 플레이어
     @OneToOne
     @JoinColumn(name = "user_id")
+    @JsonBackReference
     private User user;
 
     // ENUM(열거형)으로 만들어 두었던 seatStatus를 문자열로 저장

@@ -1,12 +1,12 @@
-package Samdi_PC.USERS.Service;
+package Samdi_PC.Users.Service;
 
 
 import Samdi_PC.Seat.Domain.SeatStatus;
 import Samdi_PC.Seat.Repository.SeatRepository;
-import Samdi_PC.USERS.DTO.CreateUserRequest;
-import Samdi_PC.USERS.Domain.User;
-import Samdi_PC.USERS.Domain.UserType;
-import Samdi_PC.USERS.Repository.UserRepository;
+import Samdi_PC.Users.DTO.CreateUserRequest;
+import Samdi_PC.Users.Domain.User;
+import Samdi_PC.Users.Domain.UserType;
+import Samdi_PC.Users.Repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
