@@ -41,6 +41,8 @@ public class SeatService {
         if (user.getUserType() == UserType.NPC) {
             seat = seatRepository.findAll().stream()
                     // 상태가 AVAILABLE인 좌석만 남김
+                    // 여기서 s는 stream을 의미함
+                    // filter는 steam API의 메서드로 스트림에서 특정조건을 만족하는걸 제외하고 전부 제거
                     .filter(s -> s.getStatus() == SeatStatus.AVAILABLE)
                     // 상태가 AVAILABLE인 좌석중 가장 먼저나오는걸 가져옴
                     .findFirst()
